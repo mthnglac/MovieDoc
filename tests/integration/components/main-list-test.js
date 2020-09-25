@@ -6,21 +6,12 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Component | main-list', function(hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
+  test('it renders main-list', async function(assert) {
     await render(hbs`<MainList />`);
 
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      <MainList>
-        template block text
-      </MainList>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.dom('label').exists();
+    assert.dom('label span').exists();
+    assert.dom('label span').hasText('What movie would you like to search ?');
+    assert.dom('label p').exists();
   });
 });
