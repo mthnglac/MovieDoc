@@ -1,20 +1,28 @@
 <h2>{{@title}}</h2>
 
+<label>
+  <span>What movie would you like to search ?</span>
+  <Input @value={{this.query}} class="light" />
+  <p>{{this.query}}</p>
+</label>
+
 <table id="movies">
-  {{#each @list as |item|}}
-    <tr>
-      <th>id</th>
-      <th>title</th>
-      <th>popularity</th>
-      <th>vote_average</th>
-      <th>overview</th>
-    </tr>
-    <tr>
-      <td>{{item.id}}</td>
-      <td>{{item.title}}</td>
-      <td>{{item.popularity}}</td>
-      <td>{{item.vote_average}}</td>
-      <td>{{item.overview}}</td>
-    </tr>
-  {{/each}}
+  <MainList::Filter @list={{@list}} @query={{this.query}} as |items|>
+    {{#each items as |item|}}
+      <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>popularity</th>
+        <th>vote_average</th>
+        <th>overview</th>
+      </tr>
+      <tr>
+        <td>{{item.id}}</td>
+        <td>{{item.title}}</td>
+        <td>{{item.popularity}}</td>
+        <td>{{item.vote_average}}</td>
+        <td>{{item.overview}}</td>
+      </tr>
+    {{/each}}
+  </MainList::Filter>
 </table>
