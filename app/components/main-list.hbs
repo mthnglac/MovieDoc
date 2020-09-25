@@ -1,0 +1,20 @@
+<h2>{{@title}}</h2>
+
+<table id="movies">
+  {{#each @list as |item|}}
+    <tr>
+      <th>id</th>
+      <th>title</th>
+      <th>popularity</th>
+      <th>vote_average</th>
+      <th>overview</th>
+    </tr>
+    <tr>
+      <td>{{item.id}}</td>
+      <td>{{item.title}}</td>
+      <td>{{item.popularity}}</td>
+      <td>{{item.vote_average}}</td>
+      <td>{{item.overview}}</td>
+    </tr>
+  {{/each}}
+</table>

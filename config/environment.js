@@ -47,5 +47,8 @@ module.exports = function(environment) {
     // here you can enable a production-specific feature
   }
 
+  // TheMovieDB Confs
+  ENV.THEMOVIEDB_BASE_URL = 'https://api.themoviedb.org/3'
+  ENV.THEMOVIEDB_API_KEY = '7539b69bf87584751f6dca9b6b1eceda'
   return ENV;
 };
