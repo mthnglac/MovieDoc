@@ -1,6 +1,6 @@
 import Model, { attr } from "@ember-data/model";
 
-export default class MoviesModel extends Model {
+export default class MovieModel extends Model {
   @attr("number") popularity;
   @attr("number") vote_count;
   @attr("boolean") video;
