@@ -5,7 +5,6 @@ export default class MoviesModel extends Model {
   @attr vote_count;
   @attr video;
   @attr poster_path;
-  @attr id;
   @attr adult;
   @attr backdrop_path;
   @attr original_title;
@@ -14,14 +13,4 @@ export default class MoviesModel extends Model {
   @attr vote_average;
   @attr overview;
   @attr release_date;
-
-  get original_language() {
-    if (this.original_language === "en") {
-      return "English"
-    } else if (this.original_language === "tr") {
-      return "Turkish"
-    } else {
-      return "other"
-    }
-  }
 }
