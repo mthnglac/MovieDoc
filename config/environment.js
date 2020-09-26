@@ -50,5 +50,6 @@ module.exports = function(environment) {
   // TheMovieDB Confs
   ENV.THEMOVIEDB_BASE_URL = 'https://api.themoviedb.org/3'
   ENV.THEMOVIEDB_API_KEY = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NTM5YjY5YmY4NzU4NDc1MWY2ZGNhOWI2YjFlY2VkYSIsInN1YiI6IjVmNmRjMjJjODliNTYxMDAzYTFkMmFhZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.wT2NQXQo_UP7Z6kC4-ZibZquYDtYilleFilLgZg_Vio'
+  ENV.THEMOVIEDB_POPULAR_MOVIE_PATH = 'movie/popular'
   return ENV;
 };
