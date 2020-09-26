@@ -1,16 +1,16 @@
-import Model, {attr} from '@ember-data/model';
+import Model, { attr } from "@ember-data/model";
 
 export default class MoviesModel extends Model {
-  @attr popularity;
-  @attr vote_count;
-  @attr video;
-  @attr poster_path;
-  @attr adult;
-  @attr backdrop_path;
-  @attr original_title;
+  @attr("number") popularity;
+  @attr("number") vote_count;
+  @attr("boolean") video;
+  @attr("string") poster_path;
+  @attr("boolean") adult;
+  @attr("string") backdrop_path;
+  @attr("string") original_title;
   @attr genre_ids;
-  @attr title;
-  @attr vote_average;
-  @attr overview;
-  @attr release_date;
+  @attr("string") title;
+  @attr("number") vote_average;
+  @attr("string") overview;
+  @attr("date") release_date;
 }
