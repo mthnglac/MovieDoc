@@ -7,6 +7,7 @@ export default class ApplicationAdapter extends JSONAPIAdapter {
   get headers() {
     return {
       Authorization: `Bearer ${ENV.TMDB.API_KEY}`,
+      "Content-Type": "application/json;charset=utf-8",
     };
   }
 
