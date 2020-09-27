@@ -1,10 +1,17 @@
-import JSONAPIAdapter from '@ember-data/adapter/json-api';
+import JSONAPIAdapter from "@ember-data/adapter/json-api";
 import ENV from "movie-doc/config/environment";
+import { inject } from "@ember/service";
 
 export default class ApplicationAdapter extends JSONAPIAdapter {
-  host =  `${ENV.THEMOVIEDB_BASE_URL}/movie/popular?api_key=${ENV.THEMOVIEDB_API_KEY}`;
+  host = `${ENV.TMDB.BASE_URL}`;
+  get headers() {
+    return {
+      Authorization: `Bearer ${ENV.TMDB.API_KEY}`,
+      "Content-Type": "application/json;charset=utf-8",
+    };
+  }
 
-  buildURL(...args) {
-    return `${super.buildURL(...args)}`;
+  pathForType() {
+    return "movie/popular";
   }
 }

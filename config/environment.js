@@ -20,6 +20,10 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+    TMDB: {
+      API_KEY: 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NTM5YjY5YmY4NzU4NDc1MWY2ZGNhOWI2YjFlY2VkYSIsInN1YiI6IjVmNmRjMjJjODliNTYxMDAzYTFkMmFhZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.wT2NQXQo_UP7Z6kC4-ZibZquYDtYilleFilLgZg_Vio',
+      BASE_URL: 'https://api.themoviedb.org/3'
     }
   };
 
@@ -47,8 +51,5 @@ module.exports = function(environment) {
     // here you can enable a production-specific feature
   }
 
-  // TheMovieDB Confs
-  ENV.THEMOVIEDB_BASE_URL = 'https://api.themoviedb.org/3'
-  ENV.THEMOVIEDB_API_KEY = '7539b69bf87584751f6dca9b6b1eceda'
   return ENV;
 };
