@@ -1,10 +1,7 @@
-//import JSONAPISerializer from "@ember-data/serializer/json-api";
-//import JSONSerializer from "@ember-data/serializer/json";
-import RESTSerializer from '@ember-data/serializer/rest';
+import JSONSerializer from "@ember-data/serializer/json";
 
-export default class ApplicationSerializer extends RESTSerializer {
+export default class ApplicationSerializer extends JSONSerializer {
   normalizeResponse(store, primaryModelClass, payload, id, requestType) {
-    payload.data = payload.results;
-    return super.normalizeResponse(...arguments);
+    return super.normalizeResponse(store, primaryModelClass, payload.results, id, requestType);
   }
 }
