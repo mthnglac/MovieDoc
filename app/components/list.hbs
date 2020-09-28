@@ -7,7 +7,7 @@
 </label>
 
 <table id="movies">
-  <MainList::Filter @list={{@list}} @query={{this.query}} as |items|>
+  <List::Filter @list={{@list}} @query={{this.query}} as |items|>
     {{#each items as |item|}}
       <tr>
         <th>id</th>
@@ -24,5 +24,5 @@
         <td>{{item.overview}}</td>
       </tr>
     {{/each}}
-  </MainList::Filter>
+  </List::Filter>
 </table>

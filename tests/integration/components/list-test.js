@@ -3,11 +3,11 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Component | main-list', function(hooks) {
+module('Integration | Component | list', function(hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders main-list', async function(assert) {
-    await render(hbs`<MainList />`);
+  test('it renders list', async function(assert) {
+    await render(hbs`<List />`);
 
     assert.dom('label').exists();
     assert.dom('label span').exists();
