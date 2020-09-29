@@ -1,6 +1,6 @@
 import Component from '@glimmer/component';
 
-export default class MainListFilterComponent extends Component {
+export default class ListFilterComponent extends Component {
   get results() {
     let { list, query  } = this.args;
 
